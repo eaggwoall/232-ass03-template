@@ -46,12 +46,12 @@ int   sum_chain(Node *headPtr);
 
 void test_swap_basic(void)
 {
-    int a = 3, b = 5;
+    int a = 5, b = 3;
     int resA = b, resB = a;
     swap(&a, &b);
 
-    TEST_ASSERT_EQUAL_INT(resB, b);
-    TEST_ASSERT_EQUAL_INT(resA, a);
+    TEST_ASSERT_EQUAL_INT(resB, a);
+    TEST_ASSERT_EQUAL_INT(resA, b);
     // TODO
 }
 
@@ -84,6 +84,9 @@ void test_swap_equal(void)
 
 void test_find_last_basic(void)
 {
+    char x[] = "limbobbia";
+    char *xptr = find_last_char(x);
+    TEST_ASSERT_EQUAL_PTR(&x[8], xptr);
     // TODO
 }
 
