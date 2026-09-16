@@ -50,9 +50,8 @@ void test_swap_basic(void)
     int resA = b, resB = a;
     swap(&a, &b);
 
-    TEST_ASSERT_EQUAL_INT(resB, a);
-    TEST_ASSERT_EQUAL_INT(resA, b);
-    // TODO
+    TEST_ASSERT_EQUAL_INT(resA, a);
+    TEST_ASSERT_EQUAL_INT(resB, b);
 }
 
 
@@ -84,9 +83,9 @@ void test_swap_equal(void)
 
 void test_find_last_basic(void)
 {
-    char x[] = "limbobbia";
-    char *xptr = find_last_char(x);
-    TEST_ASSERT_EQUAL_PTR(&x[8], xptr);
+    char str[] = "Hello, World!";
+    char *charptr = find_last_char(str);
+    TEST_ASSERT_EQUAL_PTR(&str[12], charptr);
     // TODO
 }
 
@@ -101,6 +100,9 @@ void test_find_last_basic(void)
 
 void test_find_last_single(void)
 {
+    char str[] = "A";
+    char *charptr = find_last_char(str);
+    TEST_ASSERT_EQUAL_PTR(&str[0], charptr);
     // TODO
 }
 
