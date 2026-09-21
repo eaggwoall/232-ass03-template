@@ -118,7 +118,10 @@ void test_find_last_single(void)
 
 void test_find_last_empty(void)
 {
-    // TODO
+    char str[] = "";
+    char *charptr = find_last_char(str);
+
+    TEST_ASSERT_NULL(charptr);
 }
 
 
