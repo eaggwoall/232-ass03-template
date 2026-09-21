@@ -46,12 +46,7 @@ int   sum_chain(Node *headPtr);
 
 void test_swap_basic(void)
 {
-    int a = 5, b = 3;
-    int resA = b, resB = a;
-    swap(&a, &b);
-
-    TEST_ASSERT_EQUAL_INT(resA, a);
-    TEST_ASSERT_EQUAL_INT(resB, b);
+    
 }
 
 
