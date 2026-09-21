@@ -101,7 +101,11 @@ void test_find_last_basic(void)
 
 void test_find_last_single(void)
 {
-    // TODO
+    char str[] = "A";
+    char *charptr = find_last_char(str);
+
+    TEST_ASSERT_EQUAL_PTR(&str[0], charptr);
+    TEST_ASSERT_EQUAL_CHAR('A', *charptr);
 }
 
 
