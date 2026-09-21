@@ -108,7 +108,9 @@ char* find_last_char(char *sPtr)
 
 void link_three(Node *aPtr, Node *bPtr, Node *cPtr)
 {
-    // TODO
+    aPtr->nextPtr = bPtr;
+    bPtr->nextPtr = cPtr;
+    cPtr->nextPtr = NULL;
 }
 
 

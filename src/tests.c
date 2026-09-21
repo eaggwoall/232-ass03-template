@@ -138,7 +138,12 @@ void test_find_last_empty(void)
 
 void test_link_three_chain(void)
 {
-    // TODO
+    Node a = {1, NULL}, b = {2, NULL}, c = {3, &a};
+    link_three(&a, &b, &c);
+
+    TEST_ASSERT_EQUAL_PTR(&b, a.nextPtr);
+    TEST_ASSERT_EQUAL_PTR(&c, b.nextPtr);
+    TEST_ASSERT_NULL(c.nextPtr);
 }
 
 
