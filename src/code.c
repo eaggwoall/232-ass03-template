@@ -54,7 +54,9 @@ int   sum_chain(Node *headPtr);
 
 void swap(int *aPtr, int *bPtr)
 {
-    // TODO
+    int temp = *aPtr;
+    *aPtr = *bPtr;
+    *bPtr = temp;
 }
 
 
