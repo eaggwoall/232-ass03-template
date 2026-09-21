@@ -65,7 +65,11 @@ void test_swap_basic(void)
 
 void test_swap_equal(void)
 {
-    // TODO
+    int a = 10, b = 10;
+    swap(&a, &b);
+
+    TEST_ASSERT_EQUAL_INT(10, a);
+    TEST_ASSERT_EQUAL_INT(10, b);
 }
 
 
