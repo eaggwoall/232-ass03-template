@@ -83,7 +83,11 @@ void test_swap_equal(void)
 
 void test_find_last_basic(void)
 {
-    // TODO
+    char str[] = "Hello, World!";
+    char *charptr = find_last_char(str);
+
+    TEST_ASSERT_EQUAL_PTR(&str[12], charptr);
+    TEST_ASSERT_EQUAL_CHAR('!', *charptr);
 }
 
 

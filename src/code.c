@@ -80,8 +80,17 @@ void swap(int *aPtr, int *bPtr)
 
 char* find_last_char(char *sPtr)
 {
-    // TODO
-    return NULL;
+    if (*sPtr == '\0')
+    {
+        return NULL;
+    }
+
+    while (*(sPtr + 1) != '\0')
+    {
+        sPtr++;
+    }
+
+    return sPtr;
 }
 
 
