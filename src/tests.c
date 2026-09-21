@@ -159,7 +159,13 @@ void test_link_three_chain(void)
 
 void test_remove_middle_reconnects(void)
 {
-    // TODO
+    Node a = {1, NULL}, b = {2, NULL}, c = {3, NULL};
+    link_three(&a, &b, &c);
+    remove_middle(&a, &b, &c);
+
+    TEST_ASSERT_EQUAL_PTR(&c, a.nextPtr);
+    TEST_ASSERT_NULL(b.nextPtr);
+    TEST_ASSERT_NULL(c.nextPtr);
 }
 
 

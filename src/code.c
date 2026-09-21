@@ -127,7 +127,8 @@ void link_three(Node *aPtr, Node *bPtr, Node *cPtr)
 
 void remove_middle(Node *aPtr, Node *bPtr, Node *cPtr)
 {
-    // TODO
+    aPtr->nextPtr = cPtr;
+    bPtr->nextPtr = NULL;
 }
 
 
