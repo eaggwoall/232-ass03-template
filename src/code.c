@@ -145,7 +145,7 @@ void remove_middle(Node *aPtr, Node *bPtr, Node *cPtr)
 
 void remove_last(Node *bPtr)
 {
-    // TODO
+    bPtr->nextPtr = NULL;
 }
 
 
@@ -161,7 +161,7 @@ void remove_last(Node *bPtr)
 
 void remove_first(Node *aPtr)
 {
-    // TODO
+    aPtr->nextPtr = NULL;
 }
 
 

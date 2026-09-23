@@ -181,7 +181,13 @@ void test_remove_middle_reconnects(void)
 
 void test_remove_last_truncates(void)
 {
-    // TODO
+    Node a = {1, NULL}, b = {2, NULL}, c = {3, NULL};
+    link_three(&a, &b, &c);
+    remove_last(&b);
+
+    TEST_ASSERT_NULL(b.nextPtr);
+    TEST_ASSERT_EQUAL_PTR(&b, a.nextPtr);
+    TEST_ASSERT_NULL(c.nextPtr);
 }
 
 
@@ -197,7 +203,13 @@ void test_remove_last_truncates(void)
 
 void test_remove_first_isolates(void)
 {
-    // TODO
+    Node a = {1, NULL}, b = {2, NULL}, c = {3, NULL};
+    link_three(&a, &b, &c);
+    remove_first(&a);
+
+    TEST_ASSERT_NULL(a.nextPtr);
+    TEST_ASSERT_EQUAL_PTR(&c, b.nextPtr);
+    TEST_ASSERT_NULL(c.nextPtr);
 }
 
 
