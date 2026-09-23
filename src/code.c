@@ -267,6 +267,14 @@ void assign_bytes(long long *nPtr)
 
 int sum_chain(Node *headPtr)
 {
-    // TODO
-    return 0;
+    int sum = 0;
+    Node *currentPtr = headPtr;
+
+    while (currentPtr != NULL)
+    {
+        sum += currentPtr->value;
+        currentPtr = currentPtr->nextPtr;
+    }
+
+    return sum;
 }

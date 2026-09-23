@@ -344,7 +344,11 @@ void test_assign_bytes_all(void)
 
 void test_sum_chain_basic(void)
 {
-    // TODO
+    Node a = {1, NULL}, b = {2, NULL}, c = {3, NULL};
+    link_three(&a, &b, &c);
+    int result = sum_chain(&a);
+
+    TEST_ASSERT_EQUAL_INT(6, result);
 }
 
 
@@ -358,7 +362,10 @@ void test_sum_chain_basic(void)
 
 void test_sum_chain_single(void)
 {
-    // TODO
+    Node a = {10, NULL};
+    int result = sum_chain(&a);
+
+    TEST_ASSERT_EQUAL_INT(10, result);
 }
 
 
@@ -371,5 +378,7 @@ void test_sum_chain_single(void)
 
 void test_sum_chain_null(void)
 {
-    // TODO
+    int result = sum_chain(NULL);
+
+    TEST_ASSERT_EQUAL_INT(0, result);
 }
