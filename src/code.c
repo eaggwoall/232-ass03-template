@@ -213,7 +213,7 @@ void swap_ptrs(int **aPtrPtr, int **bPtrPtr)
 
 void nullify(int **ppPtr)
 {
-    // TODO
+    *ppPtr = NULL;
 }
 
 
