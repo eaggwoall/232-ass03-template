@@ -302,7 +302,12 @@ void test_nullify_value_unchanged(void)
 
 void test_assign_bytes_first_and_last(void)
 {
-    // TODO
+    long long n = 0;
+    assign_bytes(&n);
+    unsigned char *bytePtr = (unsigned char *)&n;
+
+    TEST_ASSERT_EQUAL_UINT8(1, bytePtr[0]);
+    TEST_ASSERT_EQUAL_UINT8(8, bytePtr[7]);
 }
 
 
@@ -317,7 +322,14 @@ void test_assign_bytes_first_and_last(void)
 
 void test_assign_bytes_all(void)
 {
-    // TODO
+    long long n = 0;
+    assign_bytes(&n);
+    unsigned char *bytePtr = (unsigned char *)&n;
+
+    for (int i = 0; i < 8; i++)
+    {
+        TEST_ASSERT_EQUAL_UINT8(i + 1, bytePtr[i]);
+    }
 }
 
 

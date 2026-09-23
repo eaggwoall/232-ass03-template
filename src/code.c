@@ -240,7 +240,12 @@ void nullify(int **ppPtr)
 
 void assign_bytes(long long *nPtr)
 {
-    // TODO
+    unsigned char *bytePtr = (unsigned char *)nPtr;
+
+    for (int i = 0; i < 8; i++)
+    {
+        bytePtr[i] = i + 1;
+    }
 }
 
 
