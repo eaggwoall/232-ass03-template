@@ -186,7 +186,9 @@ void remove_first(Node *aPtr)
 
 void swap_ptrs(int **aPtrPtr, int **bPtrPtr)
 {
-    // TODO
+    int *temp = *aPtrPtr;
+    *aPtrPtr = *bPtrPtr;
+    *bPtrPtr = temp;
 }
 
 

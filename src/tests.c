@@ -223,7 +223,12 @@ void test_remove_first_isolates(void)
 
 void test_swap_ptrs_redirects(void)
 {
-    // TODO
+    int a = 10, b = 20;
+    int *aPtr = &a, *bPtr = &b;
+    swap_ptrs(&aPtr, &bPtr);
+
+    TEST_ASSERT_EQUAL_PTR(&b, aPtr);
+    TEST_ASSERT_EQUAL_PTR(&a, bPtr);
 }
 
 
@@ -238,7 +243,12 @@ void test_swap_ptrs_redirects(void)
 
 void test_swap_ptrs_values_unchanged(void)
 {
-    // TODO
+    int a = 10, b = 20;
+    int *aPtr = &a, *bPtr = &b;
+    swap_ptrs(&aPtr, &bPtr);
+
+    TEST_ASSERT_EQUAL_INT(10, a);
+    TEST_ASSERT_EQUAL_INT(20, b);
 }
 
 
